@@ -1,7 +1,8 @@
 defmodule Bin do
-  defstruct warehouse: nil,
+  defstruct id: nil,
+            warehouse: nil,
             room: nil,
-            bin: nil,
+            bay: nil,
             shelf: nil,
             position: nil,
             size: nil
@@ -10,18 +11,14 @@ defmodule Bin do
     ~r/W(\w+)-R(\w+)-B(\w+)-S(\w+)-(\w+)-(\w+)/
     |> Regex.scan(bin_str)
     |> List.first
-    |> (fn ([_ | tail]) -> tail end).()
-    |> (fn ([w, r, b, s, p, size]) -> %__MODULE__{
+    |> (fn ([id, w, r, b, s, p, size]) -> %__MODULE__{
+      id: id,
       warehouse: w,
       room: r,
-      bin: b,
+      bay: b,
       shelf: s,
       position: p,
       size: size,
     } end).()
   end
-end
-
-defmodule Product do
-  defstruct id: nil
 end
