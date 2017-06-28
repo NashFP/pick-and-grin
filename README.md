@@ -49,11 +49,23 @@ P20741, 25
 P20284, 100
 P20742, 5
 ```
-The picking ticket will list the bin, the product, the quantity to pick, product quantity remaing for the bin. At the footer show cummulative picking time.
+The picking ticket will list the bin, the product, the quantity to pick, product quantity remaining for the bin. At the footer show cummulative picking time.
+
+
+| Bin | Product | To Pick | Remaining |
+| --- | ------- | ------- | --------- |
+| W1-R1-B1-S01-1-S | P20573 | 5 | 11 |
+| W1-R3-B4-S02-C-L | P20284 | 100 | 396 |
+| W2-R1-B4-S02-B-L | P20741 | 25 | 261 |
+| W2-R3-B3-S04-A-L | P20742 | 5 | 378 |
+
+Picking time: 3630
+
+Note: 3630 is the sum of 600 + 60 + 30 + 60 + 120 + 1800 + 60 + 120 + 60 + 120 + 600
 
 ## Challenge #2
 
-Given the warehouse data found in `./data` print a picking ticket for order 1000 which has these product quantites
+Given the warehouse data found in `./data` print a picking ticket for order 1001 which has these product quantites
 
 ```
 P20000, 19
