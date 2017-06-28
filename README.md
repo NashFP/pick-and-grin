@@ -52,6 +52,8 @@ P20742, 5
 The picking ticket will list the bin, the product, the quantity to pick, product quantity remaining for the bin. At the footer show cummulative picking time.
 
 
+Picking ticket for Order 1000
+
 | Bin | Product | To Pick | Remaining |
 | --- | ------- | ------- | --------- |
 | W1-R1-B1-S01-1-S | P20573 | 5 | 11 |
